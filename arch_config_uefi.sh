@@ -27,8 +27,8 @@ sed -i '108s/.//' /etc/sudoers
 
 sed -i '33s/.//' /etc/pacman.conf
 sed -i '37s/.//' /etc/pacman.conf
-sed -i '92s/.//' /etc/pacman.conf
-sed -i '93s/.//' /etc/pacman.conf
+sed -i '90s/.//' /etc/pacman.conf
+sed -i '91s/.//' /etc/pacman.conf
 pacman -Syu
 
 printf "\n\e[1;96mDone! \e[0m\n"
