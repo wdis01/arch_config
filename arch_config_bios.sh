@@ -6,6 +6,7 @@ hwclock --systohc
 sed -i '190s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=es_DO.UTF-8" >> /etc/locale.conf
+echo "LC_COLLATE=C" >> /etc/locale.conf
 echo "KEYMAP=us-acentos" >> /etc/vconsole.conf
 echo "FONT=ter-120b" >> /etc/vconsole.conf
 
