@@ -22,7 +22,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 echo root:passwd | chpasswd
 useradd -m user
-usermod -aG wheel user
+usermod -aG sys,network,scanner,power,rfkill,users,video,storage,optical,lp,audio,wheel user
 echo user:passwd | chpasswd
 sed -i '108s/.//' /etc/sudoers
 
