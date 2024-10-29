@@ -28,7 +28,8 @@ echo root:passwd | chpasswd
 useradd -m user
 usermod -aG sys,network,scanner,power,rfkill,users,video,storage,optical,lp,audio,wheel user
 echo user:passwd | chpasswd
-sed -i '108s/.//' /etc/sudoers
+sed -i '121s/.//' /etc/sudoers
+sed -i '121s/.//' /etc/sudoers
 
 sed -i '33s/.//' /etc/pacman.conf
 sed -i '37s/.//' /etc/pacman.conf
