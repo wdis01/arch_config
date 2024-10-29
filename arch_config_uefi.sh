@@ -10,6 +10,10 @@ echo "LC_COLLATE=C" >> /etc/locale.conf
 echo "KEYMAP=us-acentos" >> /etc/vconsole.conf
 echo "FONT=ter-120b" >> /etc/vconsole.conf
 
+echo "[zram0]" >> /etc/systemd/zram-generator.conf
+echo "zram-size = min(ram, 8192)" >> /etc/systemd/zram-generator.conf
+echo "compression-algorithm = zstd" >> /etc/systemd/zram-generator.conf
+
 echo "arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
