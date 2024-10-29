@@ -20,6 +20,7 @@ echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
 systemctl enable NetworkManager
 
+sed -i '63s/.//' /etc/default/grub
 mkinitcpio -P
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
