@@ -12,7 +12,6 @@ echo "FONT=ter-120b" >> /etc/vconsole.conf
 
 echo "[zram0]" >> /etc/systemd/zram-generator.conf
 echo "zram-size = min(ram, 8192)" >> /etc/systemd/zram-generator.conf
-echo "compression-algorithm = zstd" >> /etc/systemd/zram-generator.conf
 
 echo "arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
@@ -26,8 +25,7 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 echo root:passwd | chpasswd
-useradd -m user
-usermod -aG sys,network,scanner,power,rfkill,users,video,storage,optical,lp,audio,wheel user
+useradd -m -G sys,network,scanner,power,rfkill,users,video,storage,optical,lp,audio,wheel user
 echo user:passwd | chpasswd
 sed -i '121s/.//' /etc/sudoers
 sed -i '121s/.//' /etc/sudoers
